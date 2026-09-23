@@ -1,7 +1,12 @@
+import os
+import sys
+
+sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
+
 import argparse
 import json
 import numpy as np
-from src.eda_engine import EDAEngine
+from eda_engine import EDAEngine
 
 # Custom encoder for numpy types
 class NpEncoder(json.JSONEncoder):

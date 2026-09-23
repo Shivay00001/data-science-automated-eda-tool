@@ -1,14 +1,10 @@
-from fastapi import FastAPI
-import numpy as np
+"""Top-level entry point: delegates to the real CLI in src/main.py."""
+import os
+import sys
 
-app = FastAPI()
+sys.path.insert(0, os.path.join(os.path.dirname(os.path.abspath(__file__)), "src"))
 
-@app.get("/")
-def health_check():
-    return {"status": "operational", "model_version": "v2.4.1"}
+from main import main  # noqa: E402
 
-@app.post("/predict")
-def predict(data: dict):
-    # Simulated Inference
-    vector = np.random.rand(128)
-    return {"class_id": int(np.argmax(vector)), "confidence": float(np.max(vector))}
+if __name__ == "__main__":
+    main()
