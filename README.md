@@ -1,5 +1,7 @@
 # Data Science Automated Eda Tool
 
+Built by [VisionQuantech](https://visionquantech.com) — AI agents, apps & tools for small businesses.
+
 An enterprise-grade solution engineered for high performance.
 
 ![Language](https://img.shields.io/badge/Language-Python-blue)
